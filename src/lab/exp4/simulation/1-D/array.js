@@ -83,8 +83,10 @@ window.view = {
 	},
 	takeInputFromRadioBox: function() {
 		var element = document.getElementsByName('radio_group')
-		if ( element[0].checked )
+		if ( element[0].checked ){
+			
 			this.generateRandomNumbers()
+		}
 		else if (element[1].checked)
 			this.getUserInput()
 	},
@@ -270,3 +272,9 @@ window.view = {
 	}
 }
 window.onload = function() { view.init() }
+function hide(){
+	document.getElementById('userInput').style.display = "none";
+}
+function show(){
+	document.getElementById('userInput').style.display = "block";
+}
